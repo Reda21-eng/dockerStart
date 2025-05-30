@@ -3,5 +3,9 @@ services:
   memory:
     build: .
     ports:
-      - "8082:80"
+      - "9090:90"
     restart: unless-stopped
+    volumes:
+      - memory_data:/app
+volumes:
+  memory_data:
